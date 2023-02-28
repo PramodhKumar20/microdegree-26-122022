@@ -11,4 +11,6 @@ Echo "This is Pramodhkumar here"
 Echo "Hi"
 
 Hi Bangalore
+git version
+git status
 
