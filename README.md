@@ -13,4 +13,7 @@ Echo "Hi"
 Hi Bangalore
 git version
 git status
+git push
+git pull
+
 
