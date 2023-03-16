@@ -1,0 +1,6 @@
+#1/bin/bash
+echo "welcome to jenkins"
+echo
+echo
+a=`hostname`
+echo "hello, m server name is $a"
