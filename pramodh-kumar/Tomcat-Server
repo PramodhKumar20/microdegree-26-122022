@@ -32,13 +32,13 @@ d.	/opt/tomcat/apache-tomcat-10.1.7/webapps/manager/META-INF/context.xml
 
 23.	401 Unauthorized
 a.	please examine the file conf/tomcat-users.xml in your installation
-<role rolename="manager-gui " />
-<role rolename="manager-script "/>
-<role rolename="manager-jmx "/>
-<role rolename="manager-status "/>
-<user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status" />
-<user username="deployer" password="deployer" roles="manager-script" />
-<user username="tomcat" password="s3cret" roles="manager-gui" />
+<role rolename="manager-gui"/>
+<role rolename="manager-script"/>
+<role rolename="manager-jmx"/>
+<role rolename="manager-status"/>
+<user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
+<user username="deployer" password="deployer" roles="manager-script"/>
+<user username="tomcat" password="s3cret" roles="manager-gui"/>
 b.	Tomcat shutdown & tomcat startup
 24.	Go to Jenkins & build new pipeline
 25.	Install plugin  Deploy to container Plugin
