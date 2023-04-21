@@ -1,0 +1,45 @@
+Steppes to install Tomcat server:-
+1.	Create one Ec2 instance for – Tomcat Server
+2.	Browse – Apache Tomcat server 
+3.	Go to Tomcat 10 Download
+4.	Copy the link apache tomcat 10.1.7
+https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.7/bin/apache-tomcat-10.1.7.tar.gz
+5.	 Go to terminal
+6.	Cd /opt
+7.	Mkdir tomcat
+8.	Goto tomcat folder & wget the link
+9.	Wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.7/bin/apache-tomcat-10.1.7.tar.gz
+10.	Untar
+11.	Tar – xvzf file name
+12.	Install Java 
+13.	Amazon-linux-extras install java-openjdk11
+14.	Goto cd /opt/tomcat/apache-tomcat-10.1.7/bin
+15.	Start tomcat server
+16.	./startup.sh
+17.	Install git
+18.	yum install git wget –y
+19.	sudo ln -s /opt/tomcat/apache-tomcat-10.1.7/bin/startup.sh /usr/local/bin/tomcatup
+20.	sudo ln -s /opt/tomcat/apache-tomcat-10.1.7/bin/ shutdown.sh /usr/local/bin/tomcatdown
+21.	to change port no. 8080 (needto go to server.xml file & change)
+a.	conf -> server.xml
+b.	vim server.xml
+c.	connector port 8080 to - 8090
+22.	to login 
+a.	edit host-manager & manager context.xml file & comentout (value lines)
+b.	find / -name context.xml
+c.	/opt/tomcat/apache-tomcat-10.1.7/webapps/host-manager/META-INF/context.xml
+d.	/opt/tomcat/apache-tomcat-10.1.7/webapps/manager/META-INF/context.xml
+
+23.	401 Unauthorized
+a.	please examine the file conf/tomcat-users.xml in your installation
+<role rolename="manager-gui " />
+<role rolename="manager-script "/>
+<role rolename="manager-jmx "/>
+<role rolename="manager-status "/>
+<user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status" />
+<user username="deployer" password="deployer" roles="manager-script" />
+<user username="tomcat" password="s3cret" roles="manager-gui" />
+b.	Tomcat shutdown & tomcat startup
+24.	Go to Jenkins & build new pipeline
+25.	Install plugin  Deploy to container Plugin
+26.	Create a new job
